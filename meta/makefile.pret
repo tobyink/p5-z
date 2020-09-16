@@ -11,6 +11,7 @@
 	:runtime-requirement    [ :on "Zydeco::Lite 0.068"^^:CpanId ];
 	:runtime-requirement    [ :on "Types::Standard 1.010000"^^:CpanId ];
 	:runtime-requirement    [ :on "Types::Common::String"^^:CpanId ];
+	:runtime-requirement    [ :on "Types::Common::Numeric"^^:CpanId ];
 	:runtime-requirement    [ :on "Object::Adhoc 0.003"^^:CpanId ];
 	:runtime-requirement    [ :on "Path::Tiny 0.101"^^:CpanId ];
 	:runtime-requirement    [ :on "match::simple 0.010"^^:CpanId ];
