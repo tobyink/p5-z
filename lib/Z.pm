@@ -136,14 +136,13 @@ broadly useful for a wide variety of tasks.
 
 =head2 Perl Version Compatibility
 
-Z has a compatibility mode where it will use L<Try::Tiny> instead of
-L<Syntax::Keyword::Try>. Bear in mind that these are not 100% compatible
-with each other.
+By default, Z requires Perl v5.14, but it has a compatibility mode where
+for Perl v5.8.8 and above.
 
-It will also load L<Perl6::Say> as a fallback for the C<say> built-in.
-And will not provide C<state>.
-
-It will also load L<UNIVERSAL::DOES> if there's no built-in
+It will use L<Try::Tiny> instead of L<Syntax::Keyword::Try>. (Bear in mind
+that these are not 100% compatible with each other.) It will also load
+L<Perl6::Say> as a fallback for the C<say> built-in. And it will not provide
+C<state>. It will also load L<UNIVERSAL::DOES> if there's no built-in
 UNIVERSAL::DOES method.
 
 You can specify whether you want the modern modules or the compatibility
