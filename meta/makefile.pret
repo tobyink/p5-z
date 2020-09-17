@@ -17,6 +17,7 @@
 	:runtime-requirement    [ :on "match::simple 0.010"^^:CpanId ];
 	:runtime-requirement    [ :on "Syntax::Keyword::Try 0.018"^^:CpanId ];
 	:runtime-requirement    [ :on "Try::Tiny 0.30"^^:CpanId ];
+	:runtime-requirement    [ :on "namespace::autoclean"^^:CpanId ];
 	:test-requirement       [ :on "Test::More 0.96"^^:CpanId ];
 	:develop-recommendation [ :on "Dist::Inkt 0.001"^^:CpanId ];
 	.
