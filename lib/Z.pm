@@ -57,7 +57,7 @@ sub modules {
 	
 	return (
 		[ 'Syntax::Keyword::Try',     '0.018',     qw( try                ) ],
-		[ 'Zydeco::Lite',             '0.068',     qw( -all               ) ],
+		[ 'Zydeco::Lite',             '0.070',     qw( -all               ) ],
 		[ 'Types::Standard',          '1.010000',  qw( -types -is -assert ) ],
 		[ 'Types::Common::Numeric',   '1.010000',  qw( -types -is -assert ) ],
 		[ 'Types::Common::String',    '1.010000',  qw( -types -is -assert ) ],
