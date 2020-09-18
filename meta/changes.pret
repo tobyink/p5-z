@@ -4,3 +4,8 @@
 	issued  2020-09-16;
 	label   "Initial release".
 
+`Z 0.002 cpan:TOBYINK`
+	issued  2019-09-18;
+	changeset [
+		item "Add Types::Path::Tiny dependency."^^Packaging;
+	].
