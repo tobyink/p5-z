@@ -8,7 +8,7 @@
 	:runtime-requirement    [ :on "perl 5.008008"^^:CpanId ];
 	:runtime-requirement    [ :on "Module::Runtime"^^:CpanId ];
 	:runtime-requirement    [ :on "Import::Into"^^:CpanId ];
-	:runtime-requirement    [ :on "Zydeco::Lite 0.070"^^:CpanId ];
+	:runtime-requirement    [ :on "Zydeco::Lite 0.073"^^:CpanId ];
 	:runtime-requirement    [ :on "Types::Standard 1.010000"^^:CpanId ];
 	:runtime-requirement    [ :on "Types::Common::String"^^:CpanId ];
 	:runtime-requirement    [ :on "Types::Common::Numeric"^^:CpanId ];
