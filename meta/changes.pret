@@ -9,3 +9,9 @@
 	changeset [
 		item "Add Types::Path::Tiny dependency."^^Packaging;
 	].
+
+`Z 0.003 cpan:TOBYINK`
+	issued  2019-09-18;
+	changeset [
+		item "Allow additional functions to be requested in import."^^Addition;
+	].
