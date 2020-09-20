@@ -22,3 +22,9 @@
 		item "encode_json and decode_json functions."^^Addition;
 		item "Bundle angular-sizes.pl."^^Documentation;
 	].
+
+`Z 0.005 cpan:TOBYINK`
+	issued  2019-09-20;
+	changeset [
+		item "Eliminate an uninitialized warning."^^Bugfix;
+	].
