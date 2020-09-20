@@ -280,8 +280,8 @@ It will also do C<< no indirect >> if L<indirect> is installed.
 
 Just a shortcut for loading a bunch of modules that allow you to
 quickly code Perl stuff. I've tried to avoid too many domain-specific
-modules like HTTP::Tiny, JSON, etc. The modules chosen should be
-broadly useful for a wide variety of tasks.
+modules like HTTP::Tiny, etc. The modules chosen should be broadly
+useful for a wide variety of tasks.
 
 =head2 Perl Version Compatibility
 
