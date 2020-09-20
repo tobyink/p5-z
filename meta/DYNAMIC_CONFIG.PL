@@ -7,3 +7,6 @@ if ( $] lt '5.010' ) {
 	$meta->{prereqs}{runtime}{requires}{'Perl6::Say'}      = '0.06';
 }
 
+if ( ! eval 'use JSON::MaybeXS 1.003000 ();' ) {
+	$meta->{prereqs}{runtime}{requires}{'JSON::PP'} = '2.0';
+}

@@ -141,6 +141,20 @@ my %also = (
 				: ( ( @_ > 1 ) ? @_[2 .. $#_] : qw() )
 		};
 	},
+	encode_json => sub {
+		if ( eval 'use JSON::MaybeXS 1.003000 (); 1' ) {
+			return \&JSON::MaybeXS::encode_json;
+		}
+		require JSON::PP;
+		return \&JSON::PP::encode_json;
+	},
+	decode_json => sub {
+		if ( eval 'use JSON::MaybeXS 1.003000 (); 1' ) {
+			return \&JSON::MaybeXS::decode_json;
+		}
+		require JSON::PP;
+		return \&JSON::PP::decode_json;
+	},
 	all            => q(List::Util),
 	any            => q(List::Util),
 	first          => q(List::Util),
@@ -317,8 +331,9 @@ The additional functions available are: everything from L<Scalar::Util>,
 everything from L<List::Util>, everything from L<Sub::Util>, everything
 from L<Carp> (wrapped versions with C<sprintf> functionality, except
 C<confess> which is part of the standard set of functions already),
-C<Dumper> from L<Data::Dumper>, and C<maybe> and C<provided> from
-L<PerlX::Maybe>.
+C<Dumper> from L<Data::Dumper>, C<maybe> and C<provided> from
+L<PerlX::Maybe>, and C<encode_json> and C<decode_json> from
+L<JSON::MaybeXS> or L<JSON::PP> (depending which is installed).
 
 If you specify a compatibility mode (like C<< -modern >>), this must be
 first in the import list.
