@@ -15,3 +15,10 @@
 	changeset [
 		item "Allow additional functions to be requested in import."^^Addition;
 	].
+
+`Z 0.004 cpan:TOBYINK`
+	issued  2019-09-20;
+	changeset [
+		item "encode_json and decode_json functions."^^Addition;
+		item "Bundle angular-sizes.pl."^^Documentation;
+	].
