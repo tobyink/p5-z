@@ -13,7 +13,7 @@
 	:runtime-requirement    [ :on "Types::Common::String"^^:CpanId ];
 	:runtime-requirement    [ :on "Types::Common::Numeric"^^:CpanId ];
 	:runtime-requirement    [ :on "Types::Path::Tiny"^^:CpanId ];
-	:runtime-requirement    [ :on "Object::Adhoc 0.003"^^:CpanId ];
+	:runtime-requirement    [ :on "Object::Adhoc 0.004"^^:CpanId ];
 	:runtime-requirement    [ :on "Path::Tiny 0.101"^^:CpanId ];
 	:runtime-requirement    [ :on "match::simple 0.010"^^:CpanId ];
 	:runtime-requirement    [ :on "List::Util 1.54"^^:CpanId ];
