@@ -19,7 +19,7 @@ sub import {
 	my ($target, $class ) = ( scalar caller, shift );
 	
 	my $mode = '-modern';
-	$mode = shift if $_[0] =~ /^-/;
+	( $_[0] || '' ) =~ /^-/ and $mode = shift;
 	
 	my $collection = 'modules';
 	

@@ -168,7 +168,7 @@ my $app = app sub {
 		};
 	};
 	
-	my $tolerance = 1.25;
+	my $tolerance = 1.1;
 	
 	method 'similar_numbers' => [ Maybe[Num], Maybe[Num] ] => sub {
 		my ( $app, $x, $y ) = ( shift, @_ );
