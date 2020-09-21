@@ -21,6 +21,7 @@
 	:runtime-requirement    [ :on "Try::Tiny 0.30"^^:CpanId ];
 	:runtime-requirement    [ :on "namespace::autoclean"^^:CpanId ];
 	:runtime-requirement    [ :on "Type::Tie"^^:CpanId ];
+	:runtime-recommendation [ :on "Type::Tiny::XS 0.021"^^:CpanId ];
 	:runtime-recommendation [ :on "JSON::MaybeXS"^^:CpanId ];
 	:runtime-recommendation [ :on "PerlX::Maybe::XS"^^:CpanId ];
 	:test-requirement       [ :on "Test::More 0.96"^^:CpanId ];
