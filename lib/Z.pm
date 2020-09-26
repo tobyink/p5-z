@@ -15,6 +15,14 @@ BEGIN {
 	*PERL_IS_MODERN = ( $] ge '5.014' ) ? \&true : \&false;
 }
 
+my $STRICT = 0;
+$ENV{$_} && ++$STRICT && last for qw(
+	EXTENDED_TESTING
+	AUTHOR_TESTING
+	RELEASE_TESTING
+	PERL_STRICT
+);
+
 sub import {
 	my ($target, $class ) = ( scalar caller, shift );
 	
@@ -47,6 +55,10 @@ sub import {
 	eval {
 		require indirect;
 		'indirect'->unimport::out_of( $target );
+		1;
+	} or !$STRICT or do {
+		require Carp;
+		Carp::carp( "Could not load indirect.pm" );
 	};
 	
 	$class->also( $target, @_ );
@@ -154,6 +166,12 @@ my %also = (
 		}
 		require JSON::PP;
 		return \&JSON::PP::decode_json;
+	},
+	STRICT => sub {
+		$STRICT ? sub () { !!1 } : sub () { !!0 };
+	},
+	LAX => sub {
+		$STRICT ? sub () { !!0 } : sub () { !!1 };
 	},
 	all            => q(List::Util),
 	any            => q(List::Util),
@@ -332,8 +350,9 @@ everything from L<List::Util>, everything from L<Sub::Util>, everything
 from L<Carp> (wrapped versions with C<sprintf> functionality, except
 C<confess> which is part of the standard set of functions already),
 C<Dumper> from L<Data::Dumper>, C<maybe> and C<provided> from
-L<PerlX::Maybe>, and C<encode_json> and C<decode_json> from
-L<JSON::MaybeXS> or L<JSON::PP> (depending which is installed).
+L<PerlX::Maybe>, C<encode_json> and C<decode_json> from
+L<JSON::MaybeXS> or L<JSON::PP> (depending which is installed), and
+C<STRICT> and C<LAX> from L<Devel::StrictMode>.
 
 If you specify a compatibility mode (like C<< -modern >>), this must be
 first in the import list.
