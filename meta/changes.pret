@@ -28,3 +28,11 @@
 	changeset [
 		item "Eliminate an uninitialized warning."^^Bugfix;
 	].
+
+`Z 0.006 cpan:TOBYINK`
+	issued  2019-09-27;
+	changeset [
+		item "Ensure that Type::Tie is installed."^^Packaging;
+		item "Recommend Type::Tiny::XS."^^Packaging;
+		item "STRICT and LAX functions."^^Addition;
+	].
