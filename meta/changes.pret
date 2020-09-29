@@ -36,3 +36,10 @@
 		item "Recommend Type::Tiny::XS."^^Packaging;
 		item "STRICT and LAX functions."^^Addition;
 	].
+
+`Z 0.007 cpan:TOBYINK`
+	issued  2019-09-29;
+	label   "Bond, James Bond";
+	changeset [
+		item "Allow Module::Runtime stuff to be exported."^^Addition;
+	].

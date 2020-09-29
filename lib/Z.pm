@@ -5,7 +5,7 @@ use warnings;
 package Z;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.006';
+our $VERSION   = '0.007';
 
 use Import::Into ();
 use Module::Runtime qw( use_module );
