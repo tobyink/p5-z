@@ -219,6 +219,17 @@ my %also = (
 	set_prototype  => q(Sub::Util),
 	set_subname    => q(Sub::Util),
 	subname        => q(Sub::Util),
+	check_module_name => q(Module::Runtime),
+	check_module_spec => q(Module::Runtime),
+	compose_module_name => q(Module::Runtime),
+	is_module_name => q(Module::Runtime),
+	is_module_spec => q(Module::Runtime),
+	is_valid_module_name => q(Module::Runtime),
+	is_valid_module_spec => q(Module::Runtime),
+	module_notional_filename => q(Module::Runtime),
+	require_module => q(Module::Runtime),
+	use_module     => q(Module::Runtime),
+	use_package_optimistically => q(Module::Runtime),
 );
 
 sub also {
@@ -349,6 +360,7 @@ The additional functions available are: everything from L<Scalar::Util>,
 everything from L<List::Util>, everything from L<Sub::Util>, everything
 from L<Carp> (wrapped versions with C<sprintf> functionality, except
 C<confess> which is part of the standard set of functions already),
+all the functions (but not the exported regexps) from L<Module::Runtime>,
 C<Dumper> from L<Data::Dumper>, C<maybe> and C<provided> from
 L<PerlX::Maybe>, C<encode_json> and C<decode_json> from
 L<JSON::MaybeXS> or L<JSON::PP> (depending which is installed), and
