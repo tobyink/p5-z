@@ -8,6 +8,7 @@ our $AUTHORITY = 'cpan:TOBYINK';
 our $VERSION   = '0.007';
 
 use Import::Into ();
+use IO::Handle ();
 use Module::Runtime qw( use_module );
 use Zydeco::Lite qw( true false );
 
