@@ -5,32 +5,32 @@
 	label   "Initial release".
 
 `Z 0.002 cpan:TOBYINK`
-	issued  2019-09-18;
+	issued  2020-09-18;
 	changeset [
 		item "Add Types::Path::Tiny dependency."^^Packaging;
 	].
 
 `Z 0.003 cpan:TOBYINK`
-	issued  2019-09-18;
+	issued  2020-09-18;
 	changeset [
 		item "Allow additional functions to be requested in import."^^Addition;
 	].
 
 `Z 0.004 cpan:TOBYINK`
-	issued  2019-09-20;
+	issued  2020-09-20;
 	changeset [
 		item "encode_json and decode_json functions."^^Addition;
 		item "Bundle angular-sizes.pl."^^Documentation;
 	].
 
 `Z 0.005 cpan:TOBYINK`
-	issued  2019-09-20;
+	issued  2020-09-20;
 	changeset [
 		item "Eliminate an uninitialized warning."^^Bugfix;
 	].
 
 `Z 0.006 cpan:TOBYINK`
-	issued  2019-09-27;
+	issued  2020-09-27;
 	changeset [
 		item "Ensure that Type::Tie is installed."^^Packaging;
 		item "Recommend Type::Tiny::XS."^^Packaging;
@@ -38,8 +38,14 @@
 	].
 
 `Z 0.007 cpan:TOBYINK`
-	issued  2019-09-29;
+	issued  2020-09-29;
 	label   "Bond, James Bond";
 	changeset [
 		item "Allow Module::Runtime stuff to be exported."^^Addition;
+	].
+
+`Z 0.008 cpan:TOBYINK`
+	issued  2020-11-08;
+	changeset [
+		item "Load IO::Handle."^^Addition;
 	].
