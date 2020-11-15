@@ -87,6 +87,7 @@ jobs:
           - { os: 'windows', perl: '5.8' }
           - { os: 'windows', perl: '5.10' }
           - { os: 'windows', perl: '5.12' }
+          - { os: 'ubuntu', perl: '5.8' }
         include:
           - os: ubuntu
             perl: '5.30'
@@ -108,11 +109,6 @@ jobs:
       - name: Perl version
         run: |
           perl -v
-      - name: Hack - install Hash::FieldHash on Perl 5.8
-        if: matrix.perl == '5.8'
-        run: |
-          cpanm -n MRO::Compat
-          cpanm -n Hash::FieldHash
       - name: Configure
         working-directory: ./build/
         run: perl Makefile.PL
