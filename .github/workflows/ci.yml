@@ -108,6 +108,11 @@ jobs:
       - name: Perl version
         run: |
           perl -v
+      - name: Hack - install Hash::FieldHash on Perl 5.8
+        if: matrix.perl == '5.8'
+        run: |
+          cpanm -n MRO::Compat
+          cpanm -n Hash::FieldHash
       - name: Configure
         working-directory: ./build/
         run: perl Makefile.PL
@@ -117,7 +122,6 @@ jobs:
           cpanm -n --installdeps ./build
       - name: Install extra dependencies
         if: matrix.extra_dependencies || matrix.coverage
-        shell: bash
         run: cpanm -n --installdeps --with-recommends --with-suggests ./build || true
       - name: Install coverage dependencies
         if: matrix.coverage
