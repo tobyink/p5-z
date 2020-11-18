@@ -91,7 +91,6 @@ jobs:
           - { os: 'strawberry', perl: '5.8' }
           - { os: 'strawberry', perl: '5.10' }
           - { os: 'strawberry', perl: '5.12' }
-          - { os: 'ubuntu', perl: '5.8' }
         include:
           - os: 'ubuntu'
             perl: '5.30'
